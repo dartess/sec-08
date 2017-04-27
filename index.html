@@ -11,336 +11,126 @@
 
 	<header class="caption">
 		<h1>.SEC: основы веб-программирования</h1>
-		<h2>Занятие 3. Семантическая разметка.</h2>
+		<h2>Занятие 7. Каскадные таблицы стилей.</h2>
 	</header>
 
 	<section class="slide">
-		<h2>План занятия</h2>
-		<ol>
-			<li>В педыдущей серии</li>
-			<li>Семантическая разметка</li>
-			<li>Поток документа</li>
-			<li>Практическая разметка макета</li>
-		</ol>
+		<h2>CSS</h2>
+		<p>Cascading Style Sheets</p>
+		<p>Каскадные таблицы стилей</p>
+		<p class="next">1996г.</p>
+		<p class="next">CSS3 – 2011г. – наше время</p>
 	</section>
 
 	<section class="slide">
-		<h2>Основные моменты</h2>
-		<p class="next"><i>Тег</i> — элемент разметки, например, <code>&lt;h1&gt;Заголовок&lt;h2&gt;</code></p>
-		<p class="next">Теги могут быть <b>с содержимым</b>, например, заголовок, и <b>без содержимого</b>, например, <code>&lt;img src="photo.jpg" alt="описание"&gt;</code></p>
-		<p class="next">Теги с содержимым — парные, после открывающего тега идёт закрывающий. Теги без содержимого не закрываются.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Основные моменты</h2>
-		<p class="next">Теги можно вкладывать друг в друга.</p>
-		<p class="next">При вложении тегов парные теги нужно закрыть до того, как будет закрыт тег родителя.</p>
-		<p class="next"><i style="color: green">Верно:</i> <code>&lt;i&gt;&lt;b&gt;пример текста&lt;/b&gt;&lt;/i&gt;</code></p>
-		<p class="next"><i style="color: red">Неверно:</i> <code>&lt;i&gt;&lt;b&gt;пример текста&lt;/i&gt;&lt;/b&gt;</code></p>
-	</section>
-
-	<section class="slide">
-		<h2>Основные моменты</h2>
-		<p class="next">Теги выбираются <b>по смыслу</b>, а <b>не по внешнему виду</b> в браузере.</p>
-		<p class="next"><a href="http://codepen.io/dartess/full/PpvYgd/" target="_blank">Базовый набор тегов</a>.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Семантическая разметка</h2>
-		<p class="next">Позволяет логически, осмысленно выделять сущности исходного документа. <span class="next">Примеры сементических тегов:</span></p>		
-		<ul>
-			<li class="next">&lt;ul&gt;</li>
-			<li class="next">&lt;ol&gt;</li>
-			<li class="next">&lt;li&gt;</li>
-			<li class="next">&lt;p&gt;</li>
-			<li class="next">&lt;h1&gt;–&lt;h6&gt;</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Группировка контента</h2>
-		<ul>
-			<li class="next">
-				<b>&lt;section&gt;</b> — крупный смысловой раздел страницы. Подразумевает или имеет заголовок.
-			</li>
-			<li class="next">
-				<b>&lt;article&gt;</b> — раздел, имеющий самостоятельную ценность в отрыве от
-				остального содержимого страницы. Подразумевает или имеет заголовок.
-				<i>Примеры</i>: статья, комментарий, карточка товара.
-			</li>
-			<li class="next">
-				<b>&lt;aside&gt;</b> — раздел, не имеющей прямого отношения к главному содержимому страницы, и который может быть безболезненно удалён.
-			</li>
-			<li class="next">
-				<b>&lt;nav&gt;</b> — основная навигация по сайту.
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Другие семантические теги</h2>
-		<ul>
-			<li class="next">
-				<b>&lt;figure&gt;</b> — тег для группировки любых элементов, например, изображений и подписей к ним. <code>figure</code> не должен быть связан непосредственно с основным содержимым документа и при его перемещении в другое место смысл текста не должен меняться. Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
-			</li>
-			<li class="next">
-				<b>&lt;figcaption&gt;</b> — <em>опциональная</em> подпись для <code>figure</code>.
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Figure и figcaption</h2>
-		<img style="width: 550px;" src="pictures/961f08ca4d319d066b2810baa614568b.png" alt="">
-	</section>
-
-	<section class="slide">
-		<h2>Figure и figcaption</h2>
+		<h2>Как настраивался внешний вид ранее</h2>
 		<pre>
-<code class="mark">&lt;figure&gt;</code>
-<code>  &lt;img src="pictures/8.22.png" alt="Интерфейс Pins View"&gt;</code>
-<code class="mark">  &lt;figcaption&gt;</code>
-<code>    &lt;i&gt;Рис. 8.22&lt;/i&gt; Таблица упаковки после выбора</code>
-<code>      корпуса компонента</code>
-<code>  &lt;/figcaption&gt;</code>
-<code>&lt;/figure&gt;</code>
+<code>&lt;h1 align="center"&gt;</code>
+<code>  &lt;font color="red" size="6"&gt;Заголовок&lt;/font&gt;</code>
+<code>&lt;/h1&gt;</code>
 		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>Другие семантические теги</h2>
+		<h2>Из чего состоит CSS</h2>
 		<ul>
-			<li class="next">
-				<b>&lt;blockquote&gt;</b> — цитата.
-			</li>
-			<li class="next">
-				<b>&lt;cite&gt;</b> — автор и/или источник цитаты, может быть помещен в <code>footer</code>.
-			</li>
+			<li>Селекторы</li>
+			<li>Правила</li>
+			<li>Свойства</li>
+			<li>Значения</li>
+			<li>Функции</li>
+			<li>Директивы</li>
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Другие семантические теги</h2>
-		<ul>
-			<li class="next">
-				<b>&lt;pre&gt;</b> — «сырой» вид текста (с переносами строк, табами и пробелами).
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Другие семантические теги</h2>
-		<ul>
-			<li class="next">
-				<b>&lt;code&gt;</b> — тег для выделения программного кода.
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Другие семантические теги</h2>
-		<ul>
-			<li class="next">
-				<b>&lt;i&gt;</b> — отличающийся чем-либо текст.
-			</li>
-			<li class="next">
-				<b>&lt;b&gt;</b> — выделенный текст.
-			</li>
-			<li class="next">
-				<b>&lt;em&gt;</b> — текст, имеющий смысловой акцент.
-			</li>
-			<li class="next">
-				<b>&lt;strong&gt;</b> — важный текст.
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Другие семантические теги</h2>
-		<ul>
-			<li>
-				&lt;i&gt;<i>i</i>&lt;/i&gt;
-			</li>
-			<li>
-				&lt;em&gt;<em>em</em>&lt;/em&gt;
-			</li>
-			<li>
-				&lt;b&gt;<b>b</b>&lt;/b&gt;
-			</li>
-			<li>
-				&lt;strong&gt;<strong>strong</strong>&lt;/strong&gt;
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Интерактив</h2>
-		<blockquote style="font-style: normal">
-			<p>Гарри готов был поклясться, что, стремительно проползая мимо него, змея отчетливо прошипела:</p>
-			<p>— <i>Бразилия — вот куда я отправлюсь… С-с-спасибо, амиго…</i></p>
-		</blockquote>
-		<p>&nbsp;</p>
-		<p class="next" style="color:green">&lt;i&gt;</p>
-	</section>
-
-	<section class="slide">
-		<h2>Интерактив</h2>
-		<blockquote style="font-style: normal">
-			<p>Стили могут быть подключены через внешние файлы тегом link или директивой @import, либо же находиться прямо в теле страницы — в теге style или в атрибуте style любого тега.</p>
-			<p>В первых двух случаях говорят, что к документу применены <strong style="font-weight: normal; font-style: italic">внешние таблицы стилей</strong>, а во вторых двух случаях — <strong style="font-weight: normal; font-style: italic">внутренние таблицы стилей</strong>.</p>
-		</blockquote>
-		<p class="next" style="color:green">&lt;strong&gt;</p>
-	</section>
-
-	<section class="slide">
-		<h2>Интерактив</h2>
-		<blockquote style="font-style: normal">
-			<p>Великан внимательно осмотрелся. Потом сказал только одно:</p>
-			<p>— Быстрее.</p>
-			<p>Схватил двумя руками медный трос, который они тянули, и рванул его со всей силой и даже повис на нём всем своей тяжестью.</p>
-			<p>— <em>Быстрее!</em> — поторопил он ещё раз.</p>
-		</blockquote>
-		<p class="next" style="color:green">&lt;em&gt;</p>
-	</section>
-
-	<section class="slide">
-		<h2>Интерактив</h2>
-		<blockquote style="font-style: normal">
-			<p><b>Наш адрес:</b> ул. Магистральная, д. 500.</p>
-		</blockquote>
-		<p class="next" style="color:green">&lt;b&gt;</p>
-		<p class="next" style="color:green">или &lt;i&gt;</p>
-		<p class="next" style="color:green">или оба тега</p>
-	</section>
-
-	<section class="slide">
-		<h2>Не-использование семантических тегов не будет ошибкой.</h2>
-		<h2 class="next">Неверное использование сементических тегов будет ошибкой.</h2>
-		<h2 class="next">Не существует 100%-верной разметки, так как стандарт размыт и меняется со временем.</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Стерильные теги</h2>
-		<ul>
-			<li class="next">
-				<b>&lt;div&gt;</b> — стерильная блочная обёртка.
-			</li>
-			<li class="next">
-				<b>&lt;b&gt;</b> — стерильная строчная обёртка.
-			</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Поток документа</h2>
-		<ul>
-			<li class="next">Применимо к структурным блокам, не к участкам текста.</li>
-			<li class="next">По умолчанию поток блочных элементов — вертикальный, <strong>сверху вниз</strong>.</li>
-			<li class="next">Поток можно изменить и сделать горизонтальным — <strong>слева направо</strong>.</li>
-			<li class="next">Технически <em>возможно</em> мешать горизонтальный и вертикальный поток, но <em>строго не рекомендуется</em>.</li>
-			<li class="next"><em>Допустимо</em> делать горизонтальный поток многострочным, если элементы однообразные.</li>
-			<li class="next">Существуют более сложные техники управления потоком.</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Поток документа</h2>
-		<p>Применимо к структурным блокам, не к участкам текста.</p>
-		<p>
-			Lorem ipsum dolor <mark>sit</mark> amet, consectetur adipisicing elit. Ratione rerum adipisci, natus, ipsam laborum illum accusantium facilis similique minima, vel veritatis iure fuga harum. <mark>Fugit sit officiis perferendis sint perspiciatis est, non consectetur cum corporis dolorum ipsam esse illo, laborum.</mark> Saepe quibusdam eaque blanditiis, autem dicta nulla. Tempore, blanditiis, voluptas.
-		</p>
-	</section>
-
-	<section class="slide">
-		<h2>Вертикальный поток документа</h2>
-		<div style="border: 2px dotted blue">
-			<ul class="next" style="border-radius: 10px; background-color: red">
-				<li style="border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li style="border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-			</ul>
-			<blockquote class="next" style="border-radius: 10px; background-color: rgba(240, 10, 100, .3)">
-				текст цитаты
-			</blockquote>
-			<div class="next" style="border-radius: 10px; background-color: rgba(40, 100, 180, .5); width: 65%;">
-				стерильный блок с указанием ширины
+		<h2>Из чего состоит CSS</h2>
+		<div class="double" style="max-height: 85vh">
+			<div style="display: inline-block">
+		<pre>
+<code>h1 {</code>
+<code>  color: red;</code>
+<code>  font-size: 20px;</code>
+<code>  text-align: center;</code>
+<code>  width: calc(100% - 15px);</code>
+<code>}</code>
+		</pre>
+		<br>
+		<br>
+		<br>
+		<br>
 			</div>
-			<p class="next" style="border-radius: 10px; background-color: rgba(240, 250, 100, 0.5)">
-				Параграф текста
-			</p>
-			<div class="next" style="border-radius: 10px; background-color: rgba(100, 10, 190, .3);">
-				стерильный блок без указания ширины
+			<div style="display: inline-block">
+		<pre>
+<code>@media (max-width: 767px) {</code>
+<code>  h1 {</code>
+<code>    font-size: 18px;</code>
+<code>  }</code>
+<code>}</code>
+		</pre>
 			</div>
 		</div>
 	</section>
 
 	<section class="slide">
-		<h2>Горизонтальный поток документа</h2>
-		<div style="border: 2px dotted blue">
-			<ul class="next clearfix clear-list" style="list-style-type: none; margin: 0; border-radius: 10px; background-color: red">
-				<li style="float: left; border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li style="float: left; border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-			</ul>
-		</div>
-	</section>
-
-	<section class="slide">
-		<h2>Горизонтальный поток документа c переносом контента</h2>
-		<div style="border: 2px dotted blue">
-			<ul class="next clearfix clear-list" style="list-style-type: none; margin: 0; border-radius: 10px; background-color: red">
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li class="next" style="float: left; border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-			</ul>
-		</div>
-	</section>
-
-	<section class="slide">
-		<h2>Не нужно надеяться на правильный перенос контента, если элементы не однотипные!</h2>
-		<div style="border: 2px dotted blue" class="next clearfix">
-			<ul class="next" style="float: left; border-radius: 10px; background-color: red">
-				<li style="border-radius: 10px; background-color: rgba(200, 200, 4, .6)">элемент списка</li>
-				<li style="border-radius: 10px; background-color: rgba(100, 100, 4, .6)">элемент списка</li>
-			</ul>
-			<blockquote class="next" style="border-radius: 10px; background-color: rgba(240, 10, 100, .3)">
-				текст цитаты
-			</blockquote>
-			<div class="next" style="float: left; border-radius: 10px; background-color: rgba(40, 100, 180, .5); width: 65%;">
-				стерильный блок с указанием ширины
-			</div>
-			<p class="next" style="float: left; border-radius: 10px; background-color: rgba(240, 250, 100, 0.5)">
-				Параграф текста
-			</p>
-			<div class="next" style="float: left; border-radius: 10px; background-color: rgba(100, 10, 190, .3);">
-				стерильный блок без указания ширины
-			</div>
-		</div>
-	</section>
-
-	<section class="slide">
-		<h2>Если у контента нет какой-то семантической обёртки, используется <code>div</code></h2>
-	</section>
-
-	<section class="slide">
-		<h2>Практическая разметка макета</h2>
-		<ul class="double">
-			<li class="next">Максимум семантики</li>
-			<li class="next">Нет — пустым тегам <span style="color: gray">(почти)</span></li>
-			<li class="next">Почти всегда — классы</li>
-			<li class="next">Всегда lowerCase</li>
-			<li class="next">Никогда — транслит</li>
-			<li class="next">В разметке — только «контентные» изображения, не декоративные</li>
-			<li class="next">Всегда href у ссылок <span style="color: gray">(почти)</span></li>
-			<li class="next">Если ведёт на отдельную страницу — ссылка,</li>
-			<li class="next">Иначе — кнопка</li>
-			<li class="next">Исключения</li>
+		<h2>Откуда берётся CSS</h2>
+		<ul>
+			<li class="next">Стили из подключаемых файлов</li>
+			<li class="next">Стили в теге style</li>
+			<li class="next">Инлайновые стили, атрибут style</li>
+			<li class="next">Стили браузера</li>
+			<li class="next">...</li>
 		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Селекторы</h2>
+		<ul>
+			<li class="next">Селекторы по тегу</li>
+			<li class="next">Селекторы по id</li>
+			<li class="next">Селекторы по классу</li>
+			<li class="next">Селекторы по атрибуту+</li>
+			<li class="next">Вложенные селекторы+</li>
+			<li class="next">Соседние и родственные селекторы</li>
+			<li class="next">Совмещение селекторов</li>
+			<li class="next">Перечисление селекторов</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Почему каскадные?</h2>
+		<p class="next">наследуемые и не наследуемые свойства</p>
+		<p class="next">inherit</p>
+		<p class="next">initial</p>
+		<p class="next">important</p>
+	</section>
+
+	<section class="slide">
+		<h2>Типы значений</h2>
+		<p class="next">Размер</p>
+		<p class="next">Цвет</p>
+		<p class="next">Адрес</p>
+		<p class="next">Время</p>
+		<p class="next">...</p>
+	</section>
+
+	<section class="slide">
+		<h2>Ещё?</h2>
+		<p class="next">Псевдоклассы</p>
+		<p class="next">Псевдоэлементы</p>
+	</section>
+
+	<section class="slide">
+		<h2>Откуда брать информацию</h2>
+		<ul>
+			<li>Спецификация</li>
+			<li>MDN</li>
+			<li>webref</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Всё!</h2>
 	</section>
 
 	<div class="progress"></div>
